@@ -1,0 +1,50 @@
+# Import necessary lib
+import pygame
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Screen Settings
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display/set_mode(((WIDTH))
+pygame.display.set_captiong("Christmas Animation"
+
+# Colors
+White = (255,255,255)
+Black = (0,0,0,)
+
+# Load Resources
+tree_img = pygame.transform.scale(tree_img, 
+santa_img = pygame.transform.scale(santa_img, 
+snowflake_img = pygame.transform.scale
+
+
+# Image Size Adjustion
+tree_img = pygame.transform.scale(tree_img, (200,400)  # Slimmer and more proportional tree
+santa_img = pygame.transform.scale(santa_img, (175,175)  # Square Santa
+snowflake_img = pygame.transform.scale(snowflake_img, (25,25)  # Smaller snowflakes
+
+# Load Background Music
+pygame.mixer.music.load("assets/christmas_music.mp3") # Ensure this file exists in the asset folder
+pygame.mixer.music.play(-1)  # Loop indefinitely
+
+# Snowflake class
+class Snowflake
+    def __init__(self):
+    se;f.x = random.randint(0, WIDTH)
+    self.y = random.randint (-HEIGHT, 0)
+    self.size = random.randint(20, 50) # Varing sizes for depth illusion
+    self.speed = random.uniform(1,3) * (self.size / 30) # Speed proportional to size
+
+    #Resize Snowflake Dynamically
+    self.image = pygame.transform.scale(snowflake_img, (self.size, self.size))
+def fall(self):
+    self.y += self .speed
+    if self.y > HEIGHT:
+       self.y = random.randint(-HEIGHT, 0)
+       self.x = random.randint(0, WIDTH)
+
+def draw(self, screen):
+
+
